@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .retro-card {
+    @apply bg-white border-2 border-olive rounded-2xl;
+  }
+  .blade-card {
+    @apply bg-br-dark-card border border-br-cyan/30 rounded-2xl;
+  }
+  .retro-input {
+    @apply bg-offwhite border-2 border-olive rounded-xl px-4 py-3
+           text-navy placeholder:text-olive/50 focus:border-mustard
+           focus:outline-none transition-colors duration-200 font-worksans;
+  }
+  .blade-input {
+    @apply bg-br-dark border border-br-cyan/30 rounded-xl px-4 py-3
+           text-br-cyan placeholder:text-br-cyan/30 focus:border-br-cyan
+           focus:outline-none transition-all duration-200 font-space text-sm;
+  }
+  .retro-btn-teal {
+    @apply bg-teal text-white font-space font-bold text-xs uppercase
+           rounded-xl px-6 py-3 hover:bg-teal-dark active:scale-[0.97]
+           transition-all duration-150 disabled:opacity-50;
+  }
+  .retro-btn-mustard {
+    @apply bg-mustard text-navy font-space font-bold text-xs uppercase
+           rounded-xl px-6 py-3 hover:bg-mustard-dark active:scale-[0.97]
+           transition-all duration-150 disabled:opacity-50;
+  }
+  .retro-btn-outline {
+    @apply bg-transparent text-olive font-space font-bold text-xs uppercase
+           rounded-xl px-6 py-3 border-2 border-olive
+           hover:bg-offwhite active:scale-[0.97] transition-all duration-150;
+  }
+  .retro-btn-red {
+    @apply bg-[#C53030] text-white font-space font-bold text-xs uppercase
+           rounded-xl px-6 py-3 hover:bg-[#9B2C2C] active:scale-[0.97]
+           transition-all duration-150;
+  }
+  .blade-btn-primary {
+    @apply bg-br-cyan/20 text-br-cyan font-orbitron font-bold text-xs uppercase tracking-wider
+           rounded-xl px-6 py-3 border border-br-cyan
+           hover:bg-br-cyan/30 active:scale-[0.97]
+           transition-all duration-150 disabled:opacity-50;
+  }
+  .blade-btn-amber {
+    @apply bg-br-amber/20 text-br-amber font-orbitron font-bold text-xs uppercase tracking-wider
+           rounded-xl px-6 py-3 border border-br-amber
+           hover:bg-br-amber/30 active:scale-[0.97]
+           transition-all duration-150 disabled:opacity-50;
+  }
+  .retro-label {
+    @apply font-space text-xs uppercase tracking-wider text-olive mb-1;
+  }
+  .blade-label {
+    @apply font-space text-xs uppercase tracking-widest text-br-cyan/60 mb-1;
+  }
+  .retro-stat-number {
+    @apply font-playfair font-bold text-3xl;
+  }
+  .blade-glow {
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3), 0 0 20px rgba(0, 229, 255, 0.1);
+  }
+  .blade-glow-amber {
+    box-shadow: 0 0 10px rgba(255, 176, 0, 0.3), 0 0 20px rgba(255, 176, 0, 0.1);
+  }
+  .blade-glow-magenta {
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.3), 0 0 20px rgba(255, 0, 255, 0.1);
+  }
+}
+
+@layer utilities {
+  .text-neon-cyan {
+    color: #00E5FF;
+    text-shadow: 0 0 7px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.3);
+  }
+  .text-neon-magenta {
+    color: #FF00FF;
+    text-shadow: 0 0 7px rgba(255, 0, 255, 0.6), 0 0 20px rgba(255, 0, 255, 0.3);
+  }
+  .text-neon-amber {
+    color: #FFB000;
+    text-shadow: 0 0 7px rgba(255, 176, 0, 0.6), 0 0 20px rgba(255, 176, 0, 0.3);
+  }
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*::-webkit-scrollbar { width: 6px; }
+*::-webkit-scrollbar-track { background: #0A0E1A; }
+*::-webkit-scrollbar-thumb { background: #00E5FF; border-radius: 3px; }
+*::-webkit-scrollbar-thumb:hover { background: #00B8D4; }
