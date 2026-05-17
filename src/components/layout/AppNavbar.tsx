@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom'
-import { LogOut, LayoutDashboard, Upload, AlertTriangle, User, Shield } from 'lucide-react'
+import { LogOut, LayoutDashboard, Upload, AlertTriangle, Crown, User, Shield } from 'lucide-react'
 import { useAuthStore } from '../../store/auth.store'
 import { AvatarCircle } from '../ui/AvatarCircle'
 
@@ -26,6 +26,7 @@ export function AppNavbar() {
             { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
             { icon: Upload, label: 'Upload', path: '/upload' },
             { icon: AlertTriangle, label: 'Expiring', path: '/expiring' },
+            { icon: Crown, label: 'Premium', path: '/subscription' },
             { icon: User, label: 'Profile', path: '/profile' },
             ...(isAdmin ? [{ icon: Shield, label: 'Admin', path: '/admin' }] : []),
           ].map(item => (

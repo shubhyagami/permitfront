@@ -10,6 +10,7 @@ import { SignupPage } from './pages/SignupPage'
 import { DashboardPage } from './pages/DashboardPage'
 import { UploadPage } from './pages/UploadPage'
 import { ExpiringPage } from './pages/ExpiringPage'
+import { SubscriptionPage } from './pages/SubscriptionPage'
 import { ProfilePage } from './pages/ProfilePage'
 import { EditProfilePage } from './pages/EditProfilePage'
 import { EditDocumentPage } from './pages/EditDocumentPage'
@@ -49,6 +50,7 @@ function AnimatedRoutes() {
               { path: '/dashboard', el: <DashboardPage /> },
               { path: '/upload', el: <UploadPage /> },
               { path: '/expiring', el: <ExpiringPage /> },
+              { path: '/subscription', el: <SubscriptionPage /> },
               { path: '/profile', el: <ProfilePage /> },
               { path: '/profile/edit', el: <EditProfilePage /> },
               { path: '/documents/:id/edit', el: <EditDocumentPage /> },

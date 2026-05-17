@@ -16,6 +16,7 @@ import { ShimmerCard } from '../components/ui/ShimmerCard'
 import { RetroFAB } from '../components/layout/RetroFAB'
 import { RetroFABSheet } from '../components/layout/RetroFABSheet'
 import { RetroModal } from '../components/ui/RetroModal'
+import { AdsBar } from '../components/ui/AdsBar'
 import { BottomNav } from '../components/layout/BottomNav'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { FileText, Edit2, Trash2, AlertTriangle } from 'lucide-react'
@@ -68,6 +69,7 @@ export function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-br-dark">
+      <AdsBar />
       <div className="md:ml-64 pb-20 md:pb-8 pt-14 md:pt-0">
         <div className="p-4 md:p-8 max-w-6xl mx-auto">
           {/* Stats */}

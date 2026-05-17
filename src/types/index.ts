@@ -68,3 +68,13 @@ export interface ApiError {
 export interface AdminStats {
   users: number; documents: number
 }
+
+export type SubscriptionPlan = 'MONTHLY' | 'YEARLY'
+export type SubscriptionStatus = 'ACTIVE' | 'NONE'
+
+export interface SubscriptionInfo {
+  status: SubscriptionStatus
+  plan: SubscriptionPlan | null
+  subscribedAt: string | null
+  expiresAt: string | null
+}

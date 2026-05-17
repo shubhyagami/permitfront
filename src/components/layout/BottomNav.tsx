@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom'
-import { LayoutDashboard, Upload, AlertTriangle, User } from 'lucide-react'
+import { LayoutDashboard, Upload, AlertTriangle, Crown, User } from 'lucide-react'
 
 interface Props {
   expiringCount: number
@@ -15,6 +15,7 @@ export function BottomNav({ expiringCount, hidden }: Props) {
     { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
     { icon: Upload, label: 'Upload', path: '/upload' },
     { icon: AlertTriangle, label: 'Expiring', path: '/expiring', badge: expiringCount > 0 },
+    { icon: Crown, label: 'Premium', path: '/subscription' },
     { icon: User, label: 'Profile', path: '/profile' },
   ]
 
