@@ -8,6 +8,7 @@ interface SubscriptionState {
   fetching: boolean
   fetchStatus: () => Promise<void>
   subscribe: (plan: SubscriptionPlan) => Promise<void>
+  unsubscribe: () => Promise<void>
   isSubscribed: boolean
 }
 
@@ -37,6 +38,15 @@ export const useSubscriptionStore = create<SubscriptionState>((set, get) => ({
       }
     }
     set({ fetching: false })
+  },
+
+  unsubscribe: async () => {
+    set({ loading: true })
+    try {
+      await subscriptionApi.cancel()
+    } catch { /* ignore */ }
+    localStorage.removeItem('permitiq_subscription')
+    set({ info: defaultInfo, isSubscribed: false, loading: false })
   },
 
   subscribe: async (plan: SubscriptionPlan) => {

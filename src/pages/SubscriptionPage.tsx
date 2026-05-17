@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
-import { Crown, Check, Zap, Star } from 'lucide-react'
+import { Crown, Check, Zap, Star, LogOut } from 'lucide-react'
 import { useSubscriptionStore } from '../store/subscription.store'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 import { RetroButton } from '../components/ui/RetroButton'
@@ -48,7 +48,7 @@ const plans = [
 
 export function SubscriptionPage() {
   const navigate = useNavigate()
-  const { info, isSubscribed, loading, subscribe } = useSubscriptionStore()
+  const { info, isSubscribed, loading, subscribe, unsubscribe } = useSubscriptionStore()
   const { fetchStatus } = useSubscriptionStore()
 
   useDocumentTitle('Subscription')
@@ -56,6 +56,14 @@ export function SubscriptionPage() {
   useEffect(() => {
     fetchStatus()
   }, [])
+
+  const handleUnsubscribe = async () => {
+    await unsubscribe()
+    toast('Subscription cancelled. Ads will now appear.', {
+      icon: '👋',
+      style: { borderLeft: '4px solid #FFB000' },
+    })
+  }
 
   const handleSubscribe = async (plan: 'MONTHLY' | 'YEARLY') => {
     try {
@@ -117,6 +125,15 @@ export function SubscriptionPage() {
                 <RetroButton variant="outline" onClick={() => navigate('/dashboard')}>
                   Go to Dashboard
                 </RetroButton>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-br-cyan/10">
+                <RetroButton variant="red" onClick={handleUnsubscribe} loading={loading}>
+                  <LogOut className="w-4 h-4" /> Unsubscribe
+                </RetroButton>
+                <p className="font-space text-[10px] text-white/30 mt-2">
+                  Ads will reappear after unsubscribing
+                </p>
               </div>
             </motion.div>
           </div>
