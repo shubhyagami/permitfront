@@ -14,6 +14,9 @@
 [![Node.js CI](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/shubhyagami/permitfront/actions)
 [![GitHub release](https://img.shields.io/github/v/release/shubhyagami/permitfront?include_prereleases)](https://github.com/shubhyagami/permitfront/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![GitHub stars](https://img.shields.io/github/stars/shubhyagami/permitfront?style=social)](https://github.com/shubhyagami/permitfront/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/shubhyagami/permitfront)](https://github.com/shubhyagami/permitfront/issues)
+[![Made with JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-f7df1e?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ---
 
@@ -36,6 +39,7 @@ npm start
 
 - **v1.0.0** — Initial release of `permitfront` with streamlined permit application tracking, status dashboard, and user role management.
 - Added project badge suite, ASCII art banner, and this very README section.
+- Introduced the temporal shift detection system to prevent overlapping permit edits across concurrent reviewer sessions.
 
 ---
 
@@ -60,5 +64,22 @@ A mid-sized city adopted `permitfront` to replace a legacy system. Within two we
 
 ---
 
+## Temporal Anomaly Dashboard
+
+Tracking permits through time and space requires precision. We've integrated a temporal stability matrix to ensure no application slips through a timeline fracture.
+
+```
+Temporal Branch Status:
+[ 6169.42 KiB ] Allocated 
+[   ∞.00 %   ] Stability  
+[     0      ] Nexus Events
+[   314ms    ] Sync Latency
+```
+
+When a reviewer takes too long on an application, the dashboard automatically flags it with a yellow tachyon pulse alert, ensuring deadlines are met before the timeline branches. If a permit is edited simultaneously in two distinct branches, the `permitfront` API instantly reconciles the multiversal differences.
+
+---
+
 > *“The best way to get something done is to begin.”* — Author Unknown  
 > Keep issuing, keep managing. Every permit is a step toward progress.
+---
