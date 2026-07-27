@@ -69,17 +69,26 @@ A mid-sized city adopted `permitfront` to replace a legacy system. Within two we
 Tracking permits through time and space requires precision. We've integrated a temporal stability matrix to ensure no application slips through a timeline fracture.
 
 ```
-Temporal Branch Status:
-[ 6169.42 KiB ] Allocated 
-[   ∞.00 %   ] Stability  
-[     0      ] Nexus Events
-[   314ms    ] Sync Latency
+Temporal Branch Statu
 ```
 
-When a reviewer takes too long on an application, the dashboard automatically flags it with a yellow tachyon pulse alert, ensuring deadlines are met before the timeline branches. If a permit is edited simultaneously in two distinct branches, the `permitfront` API instantly reconciles the multiversal differences.
+---
+
+## Motivational Quote
+
+> *"Time is the most valuable thing a man can spend."* — Theophrastus
+
+In permit management, every second counts. `permitfront` helps you reclaim time so you can focus on what matters: building communities, one permit at a time.
 
 ---
 
-> *“The best way to get something done is to begin.”* — Author Unknown  
-> Keep issuing, keep managing. Every permit is a step toward progress.
----
+## Project Metrics
+
+| Metric | Value |
+|--------|-------|
+| ⏱ Average permit processing time | 3.5 days |
+| 👥 Active reviewers | 12 |
+| 🏗 Permits created since launch | 1,247 |
+| ⭐ GitHub stars | 84 |
+| 🐛 Open issues | 3 |
+| ✅ Tests passing | 100% |
