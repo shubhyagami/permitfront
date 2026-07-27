@@ -43,44 +43,40 @@ npm start
 
 ## Changelog – 2026-07-27
 
-- **v1.0.1** — Enhanced temporal anomaly detection with real-time branch merging alerts. Added daily digest notifications for reviewers. Improved drag-and-drop stability in the permit timeline.
+- **v1.0.1** — Enhanced temporal anomaly detection with real-time bra
 
 ---
 
-## Weekly Highlight
+## Contributing (TVA Edition)
 
-**Permit Lifecycle Visualizer** – Now you can trace a permit from application through approval, renewal, and expiration directly on the timeline component. Drag-and-drop reordering of review stages makes triage effortless.
+Welcome, Agent! You've been flagged as a potential contributor to the **Time Variance Authority's Permit Management Frontend**. Your mission, should you choose to accept it, is to help us prune timeline deviations, close Nexus Events in the codebase, and keep the Sacred Timeline of this project stable.
+
+### 🔍 How to Report a Variant (Bug)
+
+If you spot a temporal anomaly (a.k.a. a bug), file a **TVA Incident Report** by [opening an issue](https://github.com/shubhyagami/permitfront/issues/new). Include:
+
+- **Timeline coordinates** – the environment, browser, and steps to reproduce.
+- **Expected outcome** – what the Sacred Timeline should show.
+- **Actual outcome** – what the branching reality actually did.
+- **Logs or screenshots** – we need evidence to avoid a Nexus Event.
+
+### 🛠 Submitting a Pruning (Pull Request)
+
+1. **Reset the timeline** – Fork this repository and create a branch from `main`. Name your branch something descriptive, like `fix/quantum-typo` or `feat/temporal-filter`.
+2. **Align your changes** – Ensure your code follows the TVA style guide (ESLint + Prettier). Run `npm test` to confirm you haven't accidentally created a new branch of reality.
+3. **Submit your Minuteman Request** – Open a pull request. In the description, explain **why** this change is necessary for the preservation of the Sacred Timeline. A TVA analyst will review and approve (or send you to the Void if it's a Nexus Event).
+4. **Don't forget to sign your commit** – Use `git commit -s` to certify that you have the right to contribute this code. Mobius would be proud.
+
+### 🧪 Code of Conduct
+
+All TVA employees and contractors must adhere to the **Sacred Timeline Code of Conduct**: be respectful, assume good intent, and never create a paradox. No time loops, no temporal cloning of pull requests, and absolutely no pruning of other contributors without a proper variance warrant.
+
+### 🕰 Getting Help
+
+- Stuck in a time loop? Open a discussion.
+- Need to sync with other agents? Check the `#temporal-dev` channel on our Discord (link coming soon).
+- Miss Minutes is always happy to answer questions via the project's issue tracker.
 
 ---
 
-## Pro Tips
-
-- Use the `?search=` query parameter to filter permits by applicant name or permit ID directly in the URL.  
-- Enable dark mode by toggling the theme switch in the header – it respects your OS preference out of the box.  
-- Batch-approve permits by holding `Shift` and clicking multiple rows in the list view.
-
----
-
-## Featured Use Case
-
-**Municipal Building Permit Pipeline**  
-A mid-sized city adopted `permitfront` to replace a legacy system. Within two weeks, the average permit approval time dropped from 14 days to 3.5 days, thanks to real-time notifications and automated document validation.
-
----
-
-## Temporal Anomaly Dashboard
-
-Tracking permits through time and space requires precision. We've integrated a temporal stability matrix to ensure no application slips through a timeline fracture.
-
-```
-Temporal Branch Statu
----
-
-## Project Stats
-
-| Metric | Value |
-|--------|-------|
-| ⏱️ Average Permit Approval Time | 2.3 days |
-| 📦 Total Permits Processed | 1,247 |
-| 👥 Active Users | 512 |
-| 🕒 Uptime (last 30 days) | 99.97% |
+*Remember: All deviations from the Sacred Timeline are to be reported immediately. Happy coding, Agent!*
