@@ -1,3 +1,7 @@
+You are the TVA Temporal Engineer. Current date: 2026-07-29.
+Project: permitfront (Permit management frontend in JavaScript)
+Current README:
+---
 # permitfront
 
 ```
@@ -47,36 +51,38 @@ npm start
 
 ---
 
-## Contributing (TVA Edition)
+## Contributing (TVA Temporal Compliance Guide)
 
-Welcome, Agent! You've been flagged as a potential contributor to the **Time Variance Authority's Permit Management Frontend**. Your mission, should you choose to accept it, is to help us prune timeline deviations, close Nexus Events in the codebase, and keep the Sacred Timeline of this project stable.
+Welcome, Variant Developer! The Time Variance Authority (TVA) oversees all changes to this repository. All contributions must follow the Sacred Timeline of `permitfront`. Failure to comply may result in pruning (your branch will be reset).
 
-### 🔍 How to Report a Variant (Bug)
+### 🕰️ How to File a TVA Report (Issue)
 
-If you spot a temporal anomaly (a.k.a. a bug), file a **TVA Incident Report** by [opening an issue](https://github.com/shubhyagami/permitfront/issues/new). Include:
+Before you begin a new feature or fix, file an **TVA Report** (GitHub Issue) describing the temporal anomaly you’ve observed. Use the following labels:
 
-- **Timeline coordinates** – the environment, browser, and steps to reproduce.
-- **Expected outcome** – what the Sacred Timeline should show.
-- **Actual outcome** – what the branching reality actually did.
-- **Logs or screenshots** – we need evidence to avoid a Nexus Event.
+- `temporal-distortion` – bug fix
+- `new-timeline` – feature request
+- `reset` – breaking change
+- `approved` – after review
 
-### 🛠 Submitting a Pruning (Pull Request)
+### 🔧 Submitting a Prune Request (Pull Request)
 
-1. **Reset the timeline** – Fork this repository and create a branch from `main`. Name your branch something descriptive, like `fix/quantum-typo` or `feat/temporal-filter`.
-2. **Align your changes** – Ensure your code follows the TVA style guide (ESLint + Prettier). Run `npm test` to confirm you haven't accidentally created a new branch of reality.
-3. **Submit your Minuteman Request** – Open a pull request. In the description, explain **why** this change is necessary for the preservation of the Sacred Timeline. A TVA analyst will review and approve (or send you to the Void if it's a Nexus Event).
-4. **Don't forget to sign your commit** – Use `git commit -s` to certify that you have the right to contribute this code. Mobius would be proud.
+1. **Fork the timeline** – Create your own branch off `main`. Name it `tva/your-feature-name`.
+2. **Sync with the Sacred Timeline** – Ensure your branch is up-to-date with `main`. Use `git pull --rebase upstream main` to avoid temporal paradoxes.
+3. **Write nexus-compliant code** – Follow the existing code style. All commits must be atomic and signed with a temporal signature (GPG key).
+4. **Pass the Minutemen Inspection** – Run `npm test` and ensure no anomalies appear. Add tests for any new functionality.
+5. **Submit your PR** – In the description, reference the TVA Report (issue) and include a summary of the temporal changes.
+6. **Await Judgment** – A Timekeeper will review your PR. Expect questions or requests for resets.
 
-### 🧪 Code of Conduct
+### ⚠️ Temporal Code of Conduct
 
-All TVA employees and contractors must adhere to the **Sacred Timeline Code of Conduct**: be respectful, assume good intent, and never create a paradox. No time loops, no temporal cloning of pull requests, and absolutely no pruning of other contributors without a proper variance warrant.
+- **No variant branches** – Do not push directly to `main`. Only approved Timekeepers may merge.
+- **No retroactive changes** – Do not modify commit history (force push) without explicit TVA approval.
+- **Respect the Nexus** – Keep discussions civil and focused on the project. Variants who cause timeline disruptions will be warned, then pruned.
 
-### 🕰 Getting Help
+### 🛡️ TVA Approval Badge
 
-- Stuck in a time loop? Open a discussion.
-- Need to sync with other agents? Check the `#temporal-dev` channel on our Discord (link coming soon).
-- Miss Minutes is always happy to answer questions via the project's issue tracker.
+Once your PR is merged, you will receive the **TVA Contributor** badge (a secret emoji in your GitHub profile). Accumulate 5 badges to earn a free trip to the End of Time (virtual coffee chat with the maintainers).
 
 ---
 
-*Remember: All deviations from the Sacred Timeline are to be reported immediately. Happy coding, Agent!*
+*This project is monitored by the Time Variance Authority. All contributions are recorded in the TVA archives. Stay on the timeline.*
