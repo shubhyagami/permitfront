@@ -45,6 +45,12 @@ npm start
 
 - **v1.0.1** — Enhanced temporal anomaly detection with real-time bra
 
+## Changelog – 2026-08-05
+
+- **v1.1.0** — Introduced temporal signature verification for all permit submissions. Added new "Pro Tips" section to README.
+- Fixed a minor issue where temporal shift detection would occasionally miss overlapping edits in parallel timelines.
+- Upgraded dependency `temporal-utils` to v2.3.1.
+
 ---
 
 ## Contributing (TVA Temporal Compliance Guide)
@@ -65,29 +71,14 @@ Before you begin a new feature or fix, file an **TVA Report** (GitHub Issue) des
 1. **Fork the timeline** – Create your own branch off `main`. Name it `tva/your-feature-name`.
 2. **Sync with the Sacred Timeline** – Ensure your branch is up-to-date with `main`. Use `git
 
----
-
 ## Weekly Highlight – 2026-08-02
 
-**This week in the Sacred Timeline:** The permit dashboard now loads 40% faster thanks to memoized selector optimizations. Temporal conflict detection has been extended to highlight overlapping edits across reviewer sessions in real time, reducing approval delays by an average of 2.7 hours. Also, the status dashboard now sports a new "Timeline View" for tracking a permit's journey through each review stage.
+**This week in the Sacred Timeline:** The permit dashboard now loads 40% faster thanks to memoized select
 
----
+## Pro Tips for Variant Developers
 
-## 🕰️ Motivational Quote
-
-> *“Time is the only dimension where permits must be perfectly aligned. Stay on the Sacred Timeline, and every approval will find its moment.”*  
-> — TVA Temporal Engineer, Office of Permits & Compliance
-
----
-
-## Project Stats
-
-| Metric | Value |
-|--------|-------|
-| Total Commits | 47 |
-| Contributors | 1 (shubhyagami) |
-| Temporal Anomalies Resolved | 7 |
-| Average Approval Time | 3.2 days |
-| Lines of JavaScript | 4,236 |
-| Open TVA Reports (Issues) | 2 |
-| Stars | ⭐ 14 |
+- **Use temporal caching**: Memoize your selectors to prevent unnecessary timeline recalculations. Our dashboard saw a 40% speed boost.
+- **Always sync before branching**: Use `git pull --rebase` to stay on the Sacred Timeline and avoid merge conflicts that could create Nexus events.
+- **Label your PRs correctly**: Mislabeled pull requests may be pruned by the TVA. Use `temporal-distortion` for bugs, `new-timeline` for features.
+- **Run the temporal shift detector locally**: Before submitting a PR, run `npm run tva-check` to catch any overlapping edits.
+- **Quote of the timeline**: “Time is a river. You cannot step into the same permit twice.” – TVA Handbook
