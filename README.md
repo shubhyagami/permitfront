@@ -1,84 +1,70 @@
 # permitfront
 
-```
-  ____                   _ _   __ _           _   
- |  _ \ ___ _ __   ___ (_) |_ / _(_)_ __   __| |  
- | |_) / _ \ '_ \ / _ \| | __| |_| | '_ \ / _` |  
- |  __/  __/ |_) | (_) | | |_|  _| | | | | (_| |  
- |_|   \___| .__/ \___/|_|\__|_| |_|_| |_|\__,_|  
-           |_|                                     
-        Permit Management Frontend - v1.0.0
-```
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js CI](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/shubhyagami/permitfront/actions)
 [![GitHub release](https://img.shields.io/github/v/release/shubhyagami/permitfront?include_prereleases)](https://github.com/shubhyagami/permitfront/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![GitHub stars](https://img.shields.io/github/stars/shubhyagami/permitfront?style=social)](https://github.com/shubhyagami/permitfront/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/shubhyagami/permitfront)](https://github.com/shubhyagami/permitfront/issues)
-[![Made with JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-f7df1e?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
----
+A frontend web application for managing permit applications. It provides an interface to track application statuses, manage user roles, and coordinate reviews to prevent overlapping concurrent edits.
 
-## Quick Start
+## Features
+
+- **Permit Tracking**: Monitor application statuses and progress from submission to approval.
+- **User Role Management**: Assign and manage permissions for reviewers and applicants.
+- **Edit Overlap Prevention**: Built-in detection system to prevent conflicting edits when multiple reviewers are viewing or modifying a permit simultaneously.
+- **Optimized Performance**: Utilizes memoized selectors to ensure fast dashboard load times and smooth UI rendering.
+
+## Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+Ensure you have Node.js and npm installed on your development machine.
+
+### Installation
 
 ```bash
 # Clone the repository
 git clone https://github.com/shubhyagami/permitfront.git
 
+# Navigate to the project directory
+cd permitfront
+
 # Install dependencies
-cd permitfront && npm install
+npm install
 
 # Start the development server
 npm start
 ```
 
----
+## Contributing
 
-## Changelog – 2026-07-25
+Contributions are welcome and greatly appreciated! If you have an idea for a new feature or want to fix a bug, please follow these steps:
 
-- **v1.0.0** — Initial release of `permitfront` with streamlined permit application tracking, status dashboard, and user role management.
-- Added project badge suite, ASCII art banner, and this very README section.
-- Introduced the temporal shift detection system to prevent overlapping permit edits across concurrent reviewer sessions.
+1. **Check for existing issues**: Before opening a new issue, check if your bug or feature request has already been reported.
+2. **Open an issue**: If not, open a new issue describing the bug or feature request in detail.
+3. **Fork and branch**: Fork the repository and create a new branch for your work (e.g., `feature/your-feature-name` or `fix/bug-description`).
+4. **Keep your branch updated**: Ensure your branch is up to date with `main` by using `git pull --rebase` to avoid complex merge conflicts.
+5. **Test your changes**: Run `npm run tva-check` and the standard test suite before submitting a pull request to ensure your code does not introduce overlapping edit bugs.
+6. **Open a pull request**: Submit your PR to the `main` branch with a clear description of the changes and a reference to the original issue.
 
-## Changelog – 2026-07-27
+## Changelog
 
-- **v1.0.1** — Enhanced temporal anomaly detection with real-time bra
-
-## Changelog – 2026-08-05
-
-- **v1.1.0** — Introduced temporal signature verification for all permit submissions. Added new "Pro Tips" section to README.
-- Fixed a minor issue where temporal shift detection would occasionally miss overlapping edits in parallel timelines.
+### v1.1.0 - 2026-08-05
+- Introduced temporal signature verification for all permit submissions.
+- Fixed an issue where the edit overlap detection system would occasionally miss concurrent edits in parallel sessions.
 - Upgraded dependency `temporal-utils` to v2.3.1.
 
----
+### v1.0.1 - 2026-07-27
+- Enhanced anomaly detection with real-time branch synchronization.
 
-## Contributing (TVA Temporal Compliance Guide)
+### v1.0.0 - 2026-07-25
+- Initial release of `permitfront`.
+- Added streamlined permit application tracking, status dashboard, and user role management.
 
-Welcome, Variant Developer! The Time Variance Authority (TVA) oversees all changes to this repository. All contributions must follow the Sacred Timeline of `permitfront`. Failure to comply may result in pruning (your branch will be reset).
+## License
 
-### 🕰️ How to File a TVA Report (Issue)
-
-Before you begin a new feature or fix, file an **TVA Report** (GitHub Issue) describing the temporal anomaly you’ve observed. Use the following labels:
-
-- `temporal-distortion` – bug fix
-- `new-timeline` – feature request
-- `reset` – breaking change
-- `approved` – after review
-
-### 🔧 Submitting a Prune Request (Pull Request)
-
-1. **Fork the timeline** – Create your own branch off `main`. Name it `tva/your-feature-name`.
-2. **Sync with the Sacred Timeline** – Ensure your branch is up-to-date with `main`. Use `git
-
-## Weekly Highlight – 2026-08-02
-
-**This week in the Sacred Timeline:** The permit dashboard now loads 40% faster thanks to memoized select
-
-## Pro Tips for Variant Developers
-
-- **Use temporal caching**: Memoize your selectors to prevent unnecessary timeline recalculations. Our dashboard saw a 40% speed boost.
-- **Always sync before branching**: Use `git pull --rebase` to stay on the Sacred Timeline and avoid merge conflicts that could create Nexus events.
-- **Label your PRs correctly**: Mislabeled pull requests may be pruned by the TVA. Use `temporal-distortion` for bugs, `new-timeline` for features.
-- **Run the temporal shift detector locally**: Before submitting a PR, run `npm run tva-check` to catch any overlapping edits.
-- **Quote of the timeline**: “Time is a river. You cannot step into the same permit twice.” – TVA Handbook
+This project is licensed under the MIT License. See the `LICENSE` file for details.
