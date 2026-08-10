@@ -24,15 +24,9 @@ A frontend web application for managing permit applications. It provides an inte
 ### Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/shubhyagami/permitfront.git
-
 cd permitfront
-
-# Install dependencies
 npm install
-
-# Start the development server
 npm start
 ```
 
