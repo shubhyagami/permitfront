@@ -9,19 +9,14 @@ A frontend web application for managing permit applications. It provides an inte
 
 ## Features
 
-- **Permit Tracking**: Monitor application progress and status from submission through approval.
+- **Permit Tracking**: Monitor application progress from initial submission through final approval.
 - **Role Management**: Assign and manage permissions for reviewers and applicants.
 - **Overlap Prevention**: Built-in detection prevents conflicting edits when multiple reviewers modify a permit simultaneously.
 - **Optimized Performance**: Memoized selectors ensure fast dashboard load times and smooth UI rendering.
 
 ## Getting Started
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (LTS recommended)
-- npm
-
-### Installation
+To run the project locally, ensure you have [Node.js](https://nodejs.org/) (LTS recommended) and npm installed.
 
 ```bash
 git clone https://github.com/shubhyagami/permitfront.git
