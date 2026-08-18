@@ -5,7 +5,7 @@
 [![GitHub release](https://img.shields.io/github/v/release/shubhyagami/permitfront?include_prereleases)](https://github.com/shubhyagami/permitfront/releases)
 [![GitHub issues](https://img.shields.io/github/issues/shubhyagami/permitfront)](https://github.com/shubhyagami/permitfront/issues)
 
-A frontend web application for managing permit applications. It provides an interface to track application statuses, manage user roles, and coordinate reviews to prevent overlapping concurrent edits.
+A web application for managing permit applications. It provides an interface to track application statuses, manage user roles, and coordinate reviews to prevent overlapping concurrent edits.
 
 ## Features
 
