@@ -4,12 +4,13 @@
 [![Node.js CI](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml/badge.svg)](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml)
 [![GitHub release](https://img.shields.io/github/v/release/shubhyagami/permitfront?include_prereleases)](https://github.com/shubhyagami/permitfront/releases)
 [![GitHub issues](https://img.shields.io/github/issues/shubhyagami/permitfront)](https://github.com/shubhyagami/permitfront/issues)
+[![GitHub stars](https://img.shields.io/github/stars/shubhyagami/permitfront)](https://github.com/shubhyagami/permitfront)
 
 A web application for managing permit applications. It provides an interface to track application statuses, manage user roles, and coordinate reviews to prevent overlapping concurrent edits.
 
 ## Features
 
-- **Permit Tracking**: Monitor application progress from initial submission through final approval.
+- **Permit Tracking**: Monitor application progress from initial submission to final approval.
 - **Role Management**: Assign and manage permissions for reviewers and applicants.
 - **Overlap Prevention**: Built-in detection prevents conflicting edits when multiple reviewers modify a permit simultaneously.
 - **Optimized Performance**: Memoized selectors ensure fast dashboard load times and smooth UI rendering.
