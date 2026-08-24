@@ -1,23 +1,28 @@
-# permitfront
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Permitfront
+-------------
+[![Badge: MIT License](https://img.shields.io/badge/licence-MIT-yellow)](https://opensource.org/licenses/MIT)
 [![Node.js CI](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml/badge.svg)](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml)
 [![GitHub release](https://img.shields.io/github/v/release/shubhyagami/permitfront?include_prereleases)](https://github.com/shubhyagami/permitfront/releases)
-[![GitHub issues](https://img.shields.io/github/issues/shubhyagami/permitfront)](https://github.com/shubhyagami/permitfront/issues)
-[![GitHub stars](https://img.shields.io/github/stars/shubhyagami/permitfront)](https://github.com/shubhyagami/permitfront)
 
-A web application for managing permit applications. It provides an interface to track application statuses, manage user roles, and coordinate reviews to prevent overlapping concurrent edits.
+Permitfront is a web application designed to streamline the permit application process. It provides a user-friendly interface to track application statuses, manage user roles, and prevent overlapping concurrent edits, ensuring seamless coordination among reviewers.
 
 ## Features
 
-- **Permit Tracking**: Monitor application progress from initial submission to final approval.
-- **Role Management**: Assign and manage permissions for reviewers and applicants.
-- **Overlap Prevention**: Built-in detection prevents conflicting edits when multiple reviewers modify a permit simultaneously.
-- **Optimized Performance**: Memoized selectors ensure fast dashboard load times and smooth UI rendering.
+### Permit Tracking
+Monitor application progress from initial submission to final approval with ease.
+
+### Role Management
+Effortlessly assign and manage permissions for reviewers and applicants to maintain data integrity.
+
+### Overlap Prevention
+Built-in detection prevents conflicting edits when multiple reviewers modify a permit simultaneously.
+
+### Optimized Performance
+Memoized selectors ensure fast dashboard load times and smooth UI rendering for an enhanced user experience.
 
 ## Getting Started
 
-To run the project locally, ensure you have [Node.js](https://nodejs.org/) (LTS recommended) and npm installed.
+To start using Permitfront, ensure you have Node.js (LTS recommended) and npm installed on your machine.
 
 ```bash
 git clone https://github.com/shubhyagami/permitfront.git
@@ -28,7 +33,7 @@ npm start
 
 ## Contributing
 
-Contributions are welcome! To propose a feature or fix a bug:
+Contributions are welcome and encouraged! To propose a feature or fix a bug:
 
 1. Check existing issues before opening a new one.
 2. Fork the repository and create a branch (`feature/your-feature-name` or `fix/bug-description`).
@@ -38,18 +43,16 @@ Contributions are welcome! To propose a feature or fix a bug:
 
 ## Changelog
 
-### v1.1.0 - 2026-08-05
-- Added signature verification for permit submissions.
-- Fixed edge case where edit overlap detection missed concurrent edits in parallel sessions.
-- Upgraded `temporal-utils` to v2.3.1.
+### v1.1.0 - August 2026
+- Enhanced security with signature verification for permit submissions.
+- Resolved edge case where edit overlap detection missed concurrent edits in parallel sessions.
 
-### v1.0.1 - 2026-07-27
-- Enhanced anomaly detection with real-time branch synchronization.
+### v1.0.1 - July 2026
+- Improved anomaly detection with real-time branch synchronization.
 
-### v1.0.0 - 2026-07-25
-- Initial release.
-- Added permit tracking, status dashboard, and user role management.
+### v1.0.0 - June 2026
+- Initial release, introducing permit tracking, status dashboard, and user role management.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Permitfront is licensed under the permissive MIT License. For further details, please refer to the [LICENSE](LICENSE) file.
