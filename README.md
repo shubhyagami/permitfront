@@ -25,6 +25,10 @@ Permitfront requires Node.js (LTS version recommended) and npm installed. To set
 3. Install dependencies with `npm install`.
 4. Start the application with `npm start`.
 
+## Quick Start
+
+Get Permitfront up and running in minutes by following the above setup process. Once installed, explore the application features, and familiarize yourself with the interface.
+
 ## Contributing
 
 Contributions are welcome! To propose a feature or fix a bug:
@@ -34,7 +38,8 @@ Contributions are welcome! To propose a feature or fix a bug:
 3. Regularly update your branch using `git pull --rebase`.
 4. Run `npm test` to ensure your changes do not introduce conflicts.
 
-## Changelog Snippet
+## Release Notes
+
 ### v1.1.0 (August 2026)
 Enhanced security with permit submission signature verification and resolve edge case where edit overlap detection missed concurrent edits.
 
