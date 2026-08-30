@@ -4,16 +4,16 @@
 [![Node.js CI](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml/badge.svg)](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml)
 [![Release](https://img.shields.io/github/v/release/shubhyagami/permitfront?include_prereleases)](https://github.com/shubhyagami/permitfront/releases)
 
-Permitfront is an open‑source web application that streamlines the permit‑application workflow. It offers a clear dashboard for tracking permits, manages user roles, and prevents concurrent edits, making collaboration among reviewers smooth and error‑free.
+Permitfront is an open‑source web application that streamlines the permit‑application workflow. It provides a clear dashboard for tracking permits, manages user roles, and prevents concurrent edits, making collaboration among reviewers smooth and error‑free.
 
 ## Key Features
-- **Permit Tracking** – Interactive dashboard visualizing a permit’s lifecycle from submission to approval.  
-- **Role Management** – Simple tools for assigning and controlling reviewer and applicant permissions while preserving data integrity.  
-- **Overlap Prevention** – Automatic detection of conflicting edits, stopping simultaneous modifications on the same permit.  
-- **Real‑time Updates** – Keeps all stakeholders synchronized with the latest changes.
+- **Permit tracking** – Interactive dashboard visualizing a permit’s lifecycle from submission to approval.  
+- **Role management** – Simple tools for assigning and controlling reviewer and applicant permissions while preserving data integrity.  
+- **Overlap prevention** – Automatic detection of conflicting edits, stopping simultaneous modifications on the same permit.  
+- **Real‑time updates** – Keeps all stakeholders synchronized with the latest changes.
 
 ## Getting Started
-Permitfront runs on Node.js (LTS version recommended) and npm.
+Permitfront runs on Node.js (LTS recommended) and npm.
 
 ### Prerequisites
 - Node.js ≥ 18 installed  
