@@ -5,22 +5,58 @@
 [![Release](https://img.shields.io/github/v/release/shubhyagami/permitfront?include_prereleases)](https://github.com/shubhyagami/permitfront/releases)
 [![Coverage](https://img.shields.io/codecov/c/github/shubhyagami/permitfront?logo=codecov)](https://codecov.io/gh/shubhyagami/permitfront)
 
-Permitfront is an open‑source web application that streamlines permit‑application workflows. It provides a clear dashboard for tracking permits, role‑based access control, and prevents concurrent edits, making collaboration among reviewers smooth and error‑free.
+Permitfront is an open‑source web application that simplifies the management of permit‑application workflows.  
+It offers a clear dashboard for tracking permits, role‑based permissions, and safeguards against concurrent edits so reviewers can collaborate smoothly.
+
+---
+
+## Table of Contents
+
+- [Key Features](#key-features)
+- [Quick Start](#quick-start)
+- [Prerequisites](#prerequisites)
+- [Installation & Running](#installation--running)
+- [Environment Variables](#environment-variables)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [Changelog](#changelog)
+- [License](#license)
+
+---
 
 ## Key Features
-- **Permit tracking** – Interactive dashboard visualizing a permit’s lifecycle from submission to approval.  
-- **Role management** – Simple tools for assigning and controlling reviewer and applicant permissions while preserving data integrity.  
-- **Overlap prevention** – Automatic detection of conflicting edits, stopping simultaneous modifications on the same permit.  
-- **Real‑time updates** – Keeps all stakeholders synchronized with the latest changes.
 
-## Getting Started
-Permitfront runs on Node.js (LTS recommended) and npm.
+| Feature | Description |
+|---------|-------------|
+| **Permit Tracking** | An interactive dashboard that visualises the lifecycle of a permit from submission through approval. |
+| **Role Management** | Tools for assigning and enforcing reviewer and applicant permissions, ensuring data integrity. |
+| **Overlap Prevention** | Detects and blocks conflicting edits, preventing simultaneous modifications on the same permit. |
+| **Real‑time Updates** | WebSocket‑based updates keep all stakeholders in sync with the latest changes. |
 
-### Prerequisites
-- Node.js ≥ 18 installed  
-- (Optional) `PORT` and `DB_URL` environment variables for custom configurations
+---
 
-### Installation & Run
+## Quick Start
+
+```bash
+git clone https://github.com/shubhyagami/permitfront.git
+cd permitfront
+npm install
+npm start
+```
+
+The application will start on `http://localhost:3000` by default.
+
+---
+
+## Prerequisites
+
+- **Node.js** ≥ 18 (LTS recommended)
+- Optional: A database instance (MongoDB, PostgreSQL, etc.)
+
+---
+
+## Installation & Running
+
 1. **Clone the repository**  
    ```bash
    git clone https://github.com/shubhyagami/permitfront.git
@@ -32,30 +68,65 @@ Permitfront runs on Node.js (LTS recommended) and npm.
    npm install
    ```
 
-3. **Start the application**  
+3. **Start the server**  
    ```bash
    npm start
    ```
 
-### Environment Variables
-- `PORT` – Port on which the server listens (default: 3000)  
-- `DB_URL` – Connection string for the database (e.g., MongoDB, PostgreSQL)
+   The app is accessible at `http://localhost:3000` unless overridden by the `PORT` variable.
+
+---
+
+## Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `PORT`   | `3000`  | Port on which the server listens. |
+| `DB_URL` | –       | Connection string for the database (MongoDB, PostgreSQL, etc.). |
+
+Create a `.env` file in the project root to set these values, e.g.:
+
+```
+PORT=4000
+DB_URL=mongodb://localhost:27017/permitfront
+```
+
+---
+
+## Testing
+
+Run the full test suite:
+
+```bash
+npm test
+```
+
+All tests are written with Jest. Coverage reports are generated automatically and can be viewed in the `coverage/` directory.
+
+---
 
 ## Contributing
-We welcome contributions!  
 
-1. Review existing issues before opening a new one.  
-2. Fork the repository and create a feature or fix branch (`feature/<name>` or `fix/<description>`).  
-3. Keep your branch updated with the latest changes (`git pull --rebase`).  
-4. Run the test suite to verify your changes:  
-   ```bash
-   npm test
-   ```
+We welcome contributions! Please follow these guidelines:
+
+1. **Check Issues** – Browse open issues before opening a new one.
+2. **Fork & Branch** – Fork the repository and create a branch using the pattern `feature/<name>` or `fix/<description>`.
+3. **Keep Updated** – Sync with the upstream master (`git pull --rebase origin master`).
+4. **Lint & Test** – Ensure code passes linting (`npm run lint`) and tests (`npm test`).
+5. **Pull Request** – Submit a PR with a clear title and description.
+
+All contributions are reviewed for compatibility, test coverage, and style consistency.
+
+---
 
 ## Changelog
-- **v1.1.0 (August 2026)** – Added signature verification for permit submissions and refined overlap detection.  
-- **v1.0.1 (July 2026)** – Improved real‑time synchronization for anomaly detection.  
+
+- **v1.1.0 (August 2026)** – Added signature verification for permit submissions; refined overlap detection.
+- **v1.0.1 (July 2026)** – Improved real‑time synchronization for anomaly detection.
 - **v1.0.0 (June 2026)** – Initial release with permit tracking and role management.
 
+---
+
 ## License
-Permitfront is released under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+Permitfront is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
