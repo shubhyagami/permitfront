@@ -6,18 +6,20 @@
 [![Coverage](https://img.shields.io/codecov/c/github/shubhyagami/permitfront?logo=codecov)](https://codecov.io/gh/shubhyagami/permitfront)
 
 Permitfront is an open‑source web application that streamlines permit‑application workflows.  
-It provides a clear dashboard for tracking permits, role‑based permissions, and safeguards against concurrent edits so reviewers can collaborate smoothly.
+It offers an intuitive dashboard for tracking permits, role‑based permission management, and safeguards against concurrent edits so reviewers can collaborate seamlessly.
 
 ---
 
 ## Table of Contents
 
 - [Getting Started](#getting-started)
+- [Quick Start](#quick-start)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Running the App](#running-the-app)
+- [Development](#development)
 - [Testing](#testing)
 - [Contributing](#contributing)
 - [Changelog](#changelog)
@@ -34,25 +36,38 @@ npm install
 npm start
 ```
 
-Open your browser and navigate to `http://localhost:3000` to view the default instance.
+Open your browser to `http://localhost:3000` to view the default instance.
+
+---
+
+## Quick Start
+
+```bash
+# Create a .env file
+echo "PORT=4000
+DB_URL=mongodb://localhost:27017/permitfront" > .env
+
+# Run the application
+npm run dev
+```
+
+The development server starts on `http://localhost:4000`.
 
 ---
 
 ## Features
 
-| Feature | Description |
-|---------|-------------|
-| **Permit Tracking** | Interactive dashboard visualising the full lifecycle of a permit from submission to approval. |
-| **Role Management** | Assign and enforce reviewer and applicant permissions to maintain data integrity. |
-| **Concurrency Control** | Detects and blocks conflicting edits, preventing simultaneous modifications on the same permit. |
-| **Real‑time Updates** | WebSocket‑based notifications keep all stakeholders in sync with the latest changes. |
+- **Permit Tracking** – Interactive dashboard visualising the full lifecycle of a permit from submission to approval.  
+- **Role Management** – Create and enforce reviewer and applicant permissions.  
+- **Concurrency Control** – Detects and blocks conflicting edits, preventing simultaneous modifications on the same permit.  
+- **Real‑time Updates** – WebSocket‑based notifications keep all stakeholders in sync.  
 
 ---
 
 ## Prerequisites
 
-- **Node.js** ≥ 18 (Recommended LTS)
-- **Database** – Supports MongoDB, PostgreSQL, or any driver‑compatible database.
+- **Node.js** ≥ 18 (recommended LTS)
+- **Database** – MongoDB, PostgreSQL, or any driver‑compatible database.
 
 ---
 
@@ -76,7 +91,7 @@ DB_URL=mongodb://localhost:27017/permitfront
 ```
 
 | Variable | Default | Purpose |
-|----------|---------|----------|
+|---------|---------|---------|
 | `PORT`   | `3000`  | Port the server listens on. |
 | `DB_URL` | –       | Connection string for your database. |
 
@@ -85,41 +100,56 @@ DB_URL=mongodb://localhost:27017/permitfront
 ## Running the App
 
 ```bash
+# Production
 npm start
-```
 
-The application starts on `http://localhost:3000` unless the `PORT` variable is set.  
-During development, you can use:
-
-```bash
+# Development (auto‑reload)
 npm run dev
 ```
 
-to run the server with automatic reloading (if the script is defined).
+The server starts on `http://localhost:<PORT>` (default `3000`).
+
+---
+
+## Development
+
+```bash
+# Install TypeScript and lint dependencies
+npm install
+
+# Lint the code
+npm run lint
+
+# Format the code
+npm run format
+```
 
 ---
 
 ## Testing
 
-All tests are implemented with Jest. Run them with:
+All tests are written with Jest.
 
 ```bash
 npm test
 ```
 
-Coverage reports are generated automatically and can be viewed in the `coverage/` directory.
+Coverage reports are generated in the `coverage/` directory.
 
 ---
 
 ## Contributing
 
-We appreciate all contributions! If you’d like to help, please follow these steps:
+We welcome contributions! Here’s how to get started:
 
-1. **Check Issues** – Look for open issues before creating a new one.  
-2. **Fork & Branch** – Fork the repository, then create a feature branch such as `feature/<name>` or `fix/<description>`.  
-3. **Keep Updated** – Rebase against the latest `main` state (`git pull --rebase origin main`).  
-4. **Lint & Test** – Run `npm run lint` and `npm test` to ensure code quality.  
-5. **Pull Request** – Submit a PR with a clear title and description.  
+1. **Check the issue tracker** – see if your idea has already been discussed.  
+2. **Fork & Branch** – create a feature or fix branch (`feature/<name>` or `fix/<description>`).  
+3. **Rebase** – keep your branch up to date with `main`:  
+   ```bash
+   git pull --rebase origin main
+   ```  
+4. **Lint & Test** – run `npm run lint` and `npm test` before committing.  
+5. **Pull Request** – submit a PR with a clear title and description.  
 
 All contributions are reviewed for compatibility, test coverage, and style consistency.
 
@@ -127,7 +157,8 @@ All contributions are reviewed for compatibility, test coverage, and style consi
 
 ## Changelog
 
-See the [CHANGELOG.md](CHANGELOG.md) for a detailed history of updates.  
+See the [CHANGELOG.md](CHANGELOG.md) for a full history.
+
 **Recent highlights**
 
 - **v1.1.0** – Added signature verification for permit submissions and refined overlap detection.  
