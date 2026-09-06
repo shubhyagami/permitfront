@@ -1,10 +1,10 @@
 # Permitfront
 
-> A lightweight open‑source web application that streamlines permit‑application workflows. It tracks permits, manages roles, and keeps all stakeholders in sync with real‑time notifications.
+> A lightweight open‑source web application for managing permit‑application workflows. It tracks permits, manages roles, and keeps all stakeholders in sync with real‑time notifications.
 
-[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
-[![Node.js CI](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml/badge.svg)](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml)  
-[![Release](https://img.shields.io/github/v/release/shubhyagami/permitfront?include_prereleases)](https://github.com/shubhyagami/permitfront/releases)  
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Node.js CI](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml/badge.svg)](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml)
+[![Release](https://img.shields.io/github/v/release/shubhyagami/permitfront?include_prereleases)](https://github.com/shubhyagami/permitfront/releases)
 [![Coverage](https://img.shields.io/codecov/c/github/shubhyagami/permitfront?logo=codecov)](https://codecov.io/gh/shubhyagami/permitfront)
 
 ---
@@ -12,12 +12,12 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Getting Started](#getting-started)
-- [Key Features](#key-features)
+- [Quick Start](#quick-start)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
   - [Development](#development)
   - [Production](#production)
-- [Prerequisites](#prerequisites)
 - [Configuration](#configuration)
 - [Available Scripts](#available-scripts)
 - [Testing](#testing)
@@ -29,52 +29,59 @@
 
 ## Overview
 
-Permitfront provides a full‑stack solution for managing the entire permit lifecycle—from submission to final approval. It offers:
+Permitfront is a full‑stack solution designed to handle the entire permit lifecycle—from submission to final approval. Key capabilities include:
 
-- A clear audit trail
-- Real‑time user notifications
-- Conflict protection through optimistic locking
+- A complete audit trail
+- Real‑time notifications via WebSocket
+- Conflict protection with optimistic locking
+- Role‑based access control (applicants, reviewers, admins)
+
+The application is intentionally lightweight, making it easy to customize the database driver or UI framework.
 
 ---
 
-## Getting Started
+## Quick Start
 
 ```bash
-# Clone the repository
+# Clone the repo
 git clone https://github.com/shubhyagami/permitfront.git
 cd permitfront
 
 # Install dependencies
 npm install
 
-# Create configuration
+# Copy and edit environment variables
 cp .env.example .env
-# Edit the values below
-```
+#   (edit PORT, DB_URL, etc.)
 
-Start the development server:
-
-```bash
+# Run in development mode
 npm run dev
-# → http://localhost:4000 (default)
+#   → http://localhost:4000
 ```
 
 For a production build:
 
 ```bash
-npm run build
-npm start
+npm run build   # Builds front‑end assets
+npm start       # Starts the server
 ```
 
 ---
 
-## Key Features
+## Features
 
-- **Complete lifecycle tracking** – view every status change on a permit timeline.
-- **Role‑based access control** – granular permissions for applicants, reviewers, and admins.
-- **Optimistic concurrency** – prevent conflicting edits with conflict signalling.
+- **Full lifecycle tracking** – visualises every status change on a permit timeline.
+- **Role‑based access control** – fine‑grained permissions for different user types.
+- **Optimistic concurrency** – prevents conflicting edits.
 - **Live updates** – WebSocket notifications keep all users in sync.
-- **Extensible architecture** – swap database drivers or UI frameworks with minimal effort.
+- **Extensible** – swap database drivers or UI frameworks with minimal effort.
+
+---
+
+## Prerequisites
+
+- **Node.js** ≥ 20
+- Supported database (MongoDB, PostgreSQL, etc.)
 
 ---
 
@@ -92,18 +99,11 @@ npm run dev
 ### Production
 
 ```bash
-npm run build   # Builds front‑end assets
+npm run build   # Bundles front‑end assets
 npm start       # Runs the server
 ```
 
-The server listens on the port specified by `PORT` (default `3000`).
-
----
-
-## Prerequisites
-
-- **Node.js** ≥ 20
-- A supported database (MongoDB, PostgreSQL, etc.)
+The server listens on the port defined by `PORT` (default `3000`).
 
 ---
 
@@ -113,8 +113,8 @@ Create a `.env` file in the project root:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `PORT`   | `3000`  | Port the server binds to. |
-| `DB_URL` | –       | Connection string for your database. |
+| `PORT`   | `3000`  | Server port |
+| `DB_URL` | –       | Database connection string |
 
 Example:
 
@@ -123,55 +123,55 @@ PORT=4000
 DB_URL=mongodb://localhost:27017/permitfront
 ```
 
-Refer to `.env.example` for the full list of optional settings.
+For the full list of optional settings, see `.env.example`.
 
 ---
 
 ## Available Scripts
 
-| Script         | Purpose |
-|---------------|---------|
-| `npm run dev` | Start a hot‑reloading development server. |
-| `npm start`   | Run the application in production mode. |
-| `npm run build`| Bundle front‑end assets. |
-| `npm run lint` | Run ESLint. |
-| `npm run format`| Format with Prettier. |
-| `npm test`    | Execute Jest tests and generate coverage. |
+| Script        | Purpose |
+|--------------|---------|
+| `npm run dev` | Hot‑reloading development server |
+| `npm start`   | Production server |
+| `npm run build` | Bundle front‑end assets |
+| `npm run lint` | Run ESLint |
+| `npm run format` | Run Prettier |
+| `npm test`    | Run Jest tests |
 
 ---
 
 ## Testing
 
-All tests are written with Jest. Run:
+All tests use Jest. Run:
 
 ```bash
 npm test
 ```
 
-Coverage reports are available in the `coverage/` directory and on Codecov.
+Coverage reports are generated in the `coverage/` directory and on Codecov.
 
 ---
 
 ## Contributing
 
-1. Fork the repo.  
-2. Create a feature or bug‑fix branch (`git checkout -b feature/<name>`).  
-3. Run `npm run lint && npm test` to ensure code quality.  
-4. Submit a pull request with a clear title, description, and any related issue link.  
-5. Await review; contributions are evaluated on style, test coverage, and backward compatibility.
+1. Fork the repository.
+2. Create a feature or bug‑fix branch (`git checkout -b feature/<name>`).
+3. Ensure code quality: `npm run lint && npm test`.
+4. Submit a pull request with a clear title, description, and any related issue link.
+5. Contributions are evaluated on style, test coverage, and backward compatibility.
 
-Please follow the coding conventions defined in the repository.
+Follow the repository’s coding conventions.
 
 ---
 
 ## Changelog
 
-See the full history in [CHANGELOG.md](CHANGELOG.md).
+Full history: [CHANGELOG.md](CHANGELOG.md)
 
 **Highlights**
 
-- **v1.1.0** – Added signature verification for submissions and improved overlap detection.  
-- **v1.0.1** – Enhanced real‑time synchronization for anomaly detection.  
+- **v1.1.0** – Added signature verification for submissions and improved overlap detection.
+- **v1.0.1** – Enhanced real‑time synchronization for anomaly detection.
 - **v1.0.0** – Initial release with permit tracking and role management.
 
 ---
