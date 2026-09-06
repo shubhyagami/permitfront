@@ -1,6 +1,6 @@
 # Permitfront
 
-> A lightweight, open‑source web application that simplifies permit‑application workflows by tracking permits, managing roles, and keeping all stakeholders in sync without conflicts.
+> A lightweight open‑source web application that streamlines permit‑application workflows. It tracks permits, manages roles, and keeps all stakeholders in sync with real‑time notifications.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
 [![Node.js CI](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml/badge.svg)](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml)  
@@ -12,6 +12,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
+- [Getting Started](#getting-started)
 - [Key Features](#key-features)
 - [Installation](#installation)
   - [Development](#development)
@@ -28,66 +29,87 @@
 
 ## Overview
 
-Permitfront is a full‑stack solution that helps teams manage the entire lifecycle of a permit, from submission to final approval.  
-It provides a clear audit trail, real‑time notifications, and safeguards against concurrent edits.
+Permitfront provides a full‑stack solution for managing the entire permit lifecycle—from submission to final approval. It offers:
+
+- A clear audit trail
+- Real‑time user notifications
+- Conflict protection through optimistic locking
 
 ---
 
-## Key Features
-
-- **Complete lifecycle tracking** – visualize every step against a permit’s timeline.
-- **Role‑based access control** – define applicants, reviewers, and admins with fine‑grained permissions.
-- **Optimistic locking** – prevent conflicting edits by locking records and signalling conflicts.
-- **WebSocket‑based notifications** – live updates keep all users synchronized.
-- **Extensible architecture** – swap out the database driver or UI framework with minimal effort.
-
----
-
-## Installation
-
-### Quick start (development)
+## Getting Started
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/shubhyagami/permitfront.git
 cd permitfront
 
 # Install dependencies
 npm install
 
-# Create a .env file
+# Create configuration
 cp .env.example .env
-# Edit PORT and DB_URL as needed
+# Edit the values below
+```
 
-# Run the dev server
+Start the development server:
+
+```bash
 npm run dev
-# → http://localhost:4000
+# → http://localhost:4000 (default)
+```
+
+For a production build:
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## Key Features
+
+- **Complete lifecycle tracking** – view every status change on a permit timeline.
+- **Role‑based access control** – granular permissions for applicants, reviewers, and admins.
+- **Optimistic concurrency** – prevent conflicting edits with conflict signalling.
+- **Live updates** – WebSocket notifications keep all users in sync.
+- **Extensible architecture** – swap database drivers or UI frameworks with minimal effort.
+
+---
+
+## Installation
+
+### Development
+
+```bash
+npm install
+cp .env.example .env
+# Edit .env as needed
+npm run dev
 ```
 
 ### Production
 
 ```bash
-# Build front‑end assets (if the project uses a bundler)
-npm run build
-
-# Start the server
-npm start
+npm run build   # Builds front‑end assets
+npm start       # Runs the server
 ```
 
-The server will listen on the port defined in `PORT` (default `3000`).
+The server listens on the port specified by `PORT` (default `3000`).
 
 ---
 
 ## Prerequisites
 
-- **Node.js** ≥ 20
-- A database supported by the chosen driver (MongoDB, PostgreSQL, etc.)
+- **Node.js** ≥ 20
+- A supported database (MongoDB, PostgreSQL, etc.)
 
 ---
 
 ## Configuration
 
-Create a `.env` file in the root directory. Refer to `.env.example` for all supported variables.
+Create a `.env` file in the project root:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
@@ -101,42 +123,44 @@ PORT=4000
 DB_URL=mongodb://localhost:27017/permitfront
 ```
 
+Refer to `.env.example` for the full list of optional settings.
+
 ---
 
 ## Available Scripts
 
-| Script             | Purpose |
-|--------------------|---------|
-| `npm run dev`      | Start a hot‑reloading development server. |
-| `npm start`        | Run the application in production mode. |
-| `npm run build`     | Bundle front‑end assets. |
-| `npm run lint`      | Run ESLint on the codebase. |
-| `npm run format`    | Format code with Prettier. |
-| `npm test`          | Execute Jest tests and generate coverage. |
+| Script         | Purpose |
+|---------------|---------|
+| `npm run dev` | Start a hot‑reloading development server. |
+| `npm start`   | Run the application in production mode. |
+| `npm run build`| Bundle front‑end assets. |
+| `npm run lint` | Run ESLint. |
+| `npm run format`| Format with Prettier. |
+| `npm test`    | Execute Jest tests and generate coverage. |
 
 ---
 
 ## Testing
 
-All tests use Jest. Run them with:
+All tests are written with Jest. Run:
 
 ```bash
 npm test
 ```
 
-Coverage reports are stored in `coverage/` and also appear on Codecov.
+Coverage reports are available in the `coverage/` directory and on Codecov.
 
 ---
 
 ## Contributing
 
 1. Fork the repo.  
-2. Create a feature or bug‑fix branch (`git checkout -b feature/<name>` or `git checkout -b fix/<issue>`).  
-3. Ensure the code passes linting and tests (`npm run lint && npm test`).  
-4. Submit a pull request with a meaningful title, a clear description, and a link to any related issue.  
-5. Await review; contributions are assessed for style, test coverage, and backward compatibility.
+2. Create a feature or bug‑fix branch (`git checkout -b feature/<name>`).  
+3. Run `npm run lint && npm test` to ensure code quality.  
+4. Submit a pull request with a clear title, description, and any related issue link.  
+5. Await review; contributions are evaluated on style, test coverage, and backward compatibility.
 
-Please adhere to the coding style defined in the repository and keep changes focused to avoid breaking existing functionality.
+Please follow the coding conventions defined in the repository.
 
 ---
 
@@ -144,11 +168,11 @@ Please adhere to the coding style defined in the repository and keep changes foc
 
 See the full history in [CHANGELOG.md](CHANGELOG.md).
 
-### Highlights
+**Highlights**
 
-- **v1.1.0** – added signature verification for submissions and improved overlap detection.  
-- **v1.0.1** – enhanced real‑time synchronization for anomaly detection.  
-- **v1.0.0** – initial release with permit tracking and role management.
+- **v1.1.0** – Added signature verification for submissions and improved overlap detection.  
+- **v1.0.1** – Enhanced real‑time synchronization for anomaly detection.  
+- **v1.0.0** – Initial release with permit tracking and role management.
 
 ---
 
