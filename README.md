@@ -27,48 +27,47 @@
 
 ## Overview
 
-Permitfront covers the entire permit lifecycle, from submission to final approval. Key capabilities include:
+Permitfront handles the full permit lifecycle—from submission to final approval—while providing:
 
-- Complete audit trail
+- An immutable audit trail
 - WebSocket‑based live updates
-- Optimistic concurrency to avoid edit conflicts
+- Optimistic concurrency control
 - Role‑based access control for applicants, reviewers, and admins
-- Extensible architecture that lets you swap database drivers or UI frameworks with minimal effort
+- A modular architecture that makes it easy to swap database drivers or UI frameworks
 
 ---
 
 ## Quick Start
 
 ```bash
-# 1. Clone the repo
+# 1️⃣ Clone the repo
 git clone https://github.com/shubhyagami/permitfront.git
 cd permitfront
 
-# 2. Install dependencies
+# 2️⃣ Install dependencies
 npm install
 
-# 3. Set up environment variables
-cp .env.example .env   # edit the file as needed
+# 3️⃣ Configure the environment
+cp .env.example .env
+# edit .env as needed
 
-# 4. Run in development mode
+# 4️⃣ Run in development mode
 npm run dev   # http://localhost:4000
 
-# 5. Build & run for production
+# 5️⃣ Build & run for production
 npm run build
-npm start     # http://localhost:4000
+npm start    # http://localhost:4000
 ```
 
 ---
 
 ## Features
 
-| Feature | Description |
-|---------|-------------|
-| Full‑life‑cycle tracking | Visual timeline of every status change |
-| Role‑based ACL | Fine‑grained permissions for different user types |
-| Optimistic locking | Prevents concurrent edit conflicts |
-| Live updates | WebSocket notifications keep all users in sync |
-| Extensible | Plug in new database drivers or UI frameworks easily |
+- **Full lifecycle tracking** – visual timeline of every status change
+- **Role‑based ACL** – fine‑grained permissions for applicants, reviewers, and admins
+- **Optimistic locking** – prevents concurrent edit conflicts
+- **Live updates** – WebSocket notifications keep all users in sync
+- **Extensible architecture** – plug in new database drivers or UI frameworks with minimal effort
 
 ---
 
@@ -103,7 +102,7 @@ The server listens on the port specified by `PORT` (default `3000`).
 
 ## Configuration
 
-Create a `.env` file in the project root:
+Create a `.env` file in the project root with the following variables:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
@@ -123,14 +122,14 @@ See `.env.example` for optional settings.
 
 ## Available Scripts
 
-| Script          | Purpose |
-|-----------------|--------|
-| `npm run dev`   | Hot‑reloading development server |
-| `npm run build` | Bundle front‑end assets |
-| `npm start`     | Production server |
-| `npm run lint`  | Run ESLint |
-| `npm run format`| Run Prettier |
-| `npm test`      | Run Jest tests |
+| Script          | Purpose                                |
+|-----------------|----------------------------------------|
+| `npm run dev`   | Hot‑reloading development server       |
+| `npm run build` | Bundle front‑end assets                |
+| `npm start`     | Production server                      |
+| `npm run lint`  | Run ESLint                             |
+| `npm run format`| Run Prettier                           |
+| `npm test`      | Run Jest tests                         |
 
 ---
 
@@ -148,13 +147,12 @@ Coverage reports are written to `coverage/` and can also be viewed on Codecov.
 
 ## Contributing
 
-1. Fork the repo.  
-2. Create a feature or bug‑fix branch: `git checkout -b feature/<name>`.  
-3. Run `npm run lint && npm test`.  
-4. Submit a pull request with a clear title, description, and linked issue.  
-5. Contributions are evaluated on style, test coverage, and compatibility.
+1. Fork the repo and create a feature branch: `git checkout -b feature/<name>`.
+2. Run `npm run lint && npm test` to ensure style and tests pass.
+3. Submit a pull request with a clear title, description, and linked issue (if any).
+4. Contributions are evaluated on style, test coverage, and compatibility.
 
-Follow the coding conventions used throughout the codebase.
+Follow the existing coding conventions.
 
 ---
 
