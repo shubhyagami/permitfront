@@ -1,6 +1,6 @@
 # Permitfront
 
-*A lightweight, open‑source web application that simplifies permit‑application workflows. It tracks permits, manages roles, and keeps stakeholders in sync with real‑time notifications.*
+A lightweight, open‑source web application that simplifies permit‑application workflows. It tracks permits, manages roles, and keeps stakeholders in sync with real‑time notifications.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Node.js CI](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml/badge.svg)](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml)
@@ -9,47 +9,31 @@
 
 ---
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Quick Start](#quick-start)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Available Scripts](#available-scripts)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [Changelog](#changelog)
-- [License](#license)
-
----
-
-## Overview
+## 📖 Overview
 
 Permitfront handles the full permit lifecycle—from submission to final approval—while providing:
 
-- An immutable audit trail
-- WebSocket‑based live updates
-- Optimistic concurrency control
-- Role‑based access control for applicants, reviewers, and admins
+- An immutable audit trail  
+- WebSocket‑based live updates  
+- Optimistic concurrency control  
+- Role‑based access control for applicants, reviewers, and admins  
 - A modular architecture that makes it easy to swap database drivers or UI frameworks
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
-# 1️⃣ Clone the repo
+# 1️⃣ Clone the repository
 git clone https://github.com/shubhyagami/permitfront.git
 cd permitfront
 
 # 2️⃣ Install dependencies
 npm install
 
-# 3️⃣ Configure the environment
+# 3️⃣ Create the environment file
 cp .env.example .env
-# edit .env as needed
+# Edit .env to match your setup
 
 # 4️⃣ Run in development mode
 npm run dev   # http://localhost:4000
@@ -59,26 +43,28 @@ npm run build
 npm start    # http://localhost:4000
 ```
 
----
-
-## Features
-
-- **Full lifecycle tracking** – visual timeline of every status change
-- **Role‑based ACL** – fine‑grained permissions for applicants, reviewers, and admins
-- **Optimistic locking** – prevents concurrent edit conflicts
-- **Live updates** – WebSocket notifications keep all users in sync
-- **Extensible architecture** – plug in new database drivers or UI frameworks with minimal effort
+> The server listens on the port defined by `PORT` (default `3000`).
 
 ---
 
-## Prerequisites
+## ✨ Features
 
-- **Node.js** ≥ 20
+- **Full lifecycle tracking** – a visual timeline of every status change  
+- **Role‑based ACL** – fine‑grained permissions for applicants, reviewers, and admins  
+- **Optimistic locking** – prevents concurrent edit conflicts  
+- **Live updates** – WebSocket notifications keep all users in sync  
+- **Extensible architecture** – plug in new database drivers or UI frameworks with minimal effort  
+
+---
+
+## ⚙️ Prerequisites
+
+- **Node.js** ≥ 20  
 - A supported database (MongoDB, PostgreSQL, etc.)
 
 ---
 
-## Installation
+## 🛠️ Installation
 
 ### Development
 
@@ -96,13 +82,11 @@ npm run build   # Bundle front‑end assets
 npm start       # Starts the server
 ```
 
-The server listens on the port specified by `PORT` (default `3000`).
-
 ---
 
-## Configuration
+## 🔧 Configuration
 
-Create a `.env` file in the project root with the following variables:
+Create a `.env` file in the project root:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
@@ -120,22 +104,22 @@ See `.env.example` for optional settings.
 
 ---
 
-## Available Scripts
+## 🧩 Available Scripts
 
-| Script          | Purpose                                |
-|-----------------|----------------------------------------|
-| `npm run dev`   | Hot‑reloading development server       |
-| `npm run build` | Bundle front‑end assets                |
-| `npm start`     | Production server                      |
-| `npm run lint`  | Run ESLint                             |
-| `npm run format`| Run Prettier                           |
-| `npm test`      | Run Jest tests                         |
+| Script          | Purpose                                 |
+|-----------------|------------------------------------------|
+| `npm run dev`   | Hot‑reloading development server          |
+| `npm run build` | Bundle front‑end assets                   |
+| `npm start`     | Production server                         |
+| `npm run lint` | Run ESLint                                 |
+| `npm run format`| Run Prettier                               |
+| `npm test`      | Run Jest tests                            |
 
 ---
 
-## Testing
+## 🧪 Testing
 
-All tests use Jest. Run:
+All tests use Jest.
 
 ```bash
 npm test
@@ -145,18 +129,17 @@ Coverage reports are written to `coverage/` and can also be viewed on Codecov.
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
-1. Fork the repo and create a feature branch: `git checkout -b feature/<name>`.
-2. Run `npm run lint && npm test` to ensure style and tests pass.
-3. Submit a pull request with a clear title, description, and linked issue (if any).
-4. Contributions are evaluated on style, test coverage, and compatibility.
+1. Fork the repo and create a feature branch: `git checkout -b feature/<name>`.  
+2. Run `npm run lint && npm test` to ensure style and tests pass.  
+3. Submit a pull request with a clear title, description, and linked issue (if any).  
 
-Follow the existing coding conventions.
+Contributions are evaluated on style, test coverage, and compatibility.
 
 ---
 
-## Changelog
+## 📦 Changelog
 
 See the full history in [CHANGELOG.md](CHANGELOG.md).
 
@@ -168,6 +151,6 @@ See the full history in [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
-## License
+## 📄 License
 
 MIT © [Shubhyagami](https://github.com/shubhyagami)
