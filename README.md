@@ -2,26 +2,25 @@
 [K[2m  [2mmodel deepseek-ai/deepseek-v4.1-flash failed, trying next...[0m[0m
 # Permitfront
 
-> A lightweight, open‑source web application that simplifies permit‑application workflows.  
-> Tracks permits, manages roles, and delivers real‑time notifications to keep stakeholders in sync.
+A lightweight, open‑source web application that streamlines permit‑application workflows.  
+It manages permits, enforces role‑based access control, keeps an immutable audit trail, and provides real‑time updates via WebSockets.
 
-[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Node.js CI](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml/badge.svg)](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml)
-[![Release](https://img.shields.io/github/v/release/shubhyagami/permitfront?include_prereleases)](https://github.com/shubhyagami/permitfront/releases)
-[![Coverage](https://img.shields.io/codecov/c/github/shubhyagami/permitfront?logo=codecov)](https://codecov.io/gh/shubhyagami/permitfront)
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Node.js CI](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml/badge.svg)
+![Release](https://img.shields.io/github/v/release/shubhyagami/permitfront?include_prereleases)
+![Coverage](https://img.shields.io/codecov/c/github/shubhyagami/permitfront?logo=codecov)
 
 ---
 
-## 📖 Table of contents
+## 📚 Table of contents
 
 - [Overview](#overview)
 - [Features](#features)
 - [Architecture](#architecture)
 - [Prerequisites](#prerequisites)
 - [Getting started](#getting-started)
-- [Installation & build](#installation--build)
 - [Configuration](#configuration)
-- [Available scripts](#available-scripts)
+- [Scripts](#scripts)
 - [Testing](#testing)
 - [Contributing](#contributing)
 - [Changelog](#changelog)
@@ -29,12 +28,12 @@
 
 ---
 
-## 📚 Overview
+## 📖 Overview
 
 Permitfront handles the entire permit lifecycle—from initial submission to final approval—while providing:
 
 - **Immutable audit trail** – every status change is logged with a timestamp and actor.
-- **Role‑based access control** – distinct permission sets for applicants, reviewers, and admins.
+- **Role‑based ACL** – distinct permission sets for applicants, reviewers, and admins.
 - **Optimistic concurrency** – prevents edit conflicts when multiple users update the same record.
 - **WebSocket updates** – live notifications keep all users in sync.
 - **Extensible architecture** – swap database drivers or UI frameworks without touching core logic.
@@ -60,9 +59,9 @@ Supported databases: MongoDB, PostgreSQL, MySQL, SQLite (and any driver that imp
 ## 🏗️ Architecture
 
 ```
-┌──────────────────┐      ┌───────────────────────┐
-│ Frontend (React)  │<───►│ WebSocket Server (WS) │
-└──────────────────┘      └───────────────────────┘
+┌─────────────────────┐      ┌───────────────────────┐
+│ Frontend (React)     │<───►│ WebSocket Server (WS)   │
+└─────────────────────┘      └───────────────────────┘
           ▲                        │
           │                        ▼
 ┌───────────────────────┐   ┌─────────────────────┐
@@ -75,13 +74,13 @@ Supported databases: MongoDB, PostgreSQL, MySQL, SQLite (and any driver that imp
 └───────────────────────┘
 ```
 
-The core logic resides in the API layer. The database layer is abstracted so any supported driver can be swapped by updating the configuration.
+The core logic lives in the API layer. The database layer is abstracted so any supported driver can be swapped by updating the configuration.
 
 ---
 
 ## ⚙️ Prerequisites
 
-- **Node.js** ≥ 20
+- Node.js ≥ 20
 - One of the supported databases:
   - MongoDB
   - PostgreSQL
@@ -93,50 +92,26 @@ The core logic resides in the API layer. The database layer is abstracted so any
 ## 🚀 Getting started
 
 ```bash
-# Clone
+# Clone the repository
 git clone https://github.com/shubhyagami/permitfront.git
 cd permitfront
 
-# Install
+# Install dependencies
 npm install
 
-# Create environment file
+# Copy the example environment file and adjust to your setup
 cp .env.example .env
-# Edit .env to match your environment
+#   EDIT .env to set PORT, DB_URL, JWT_SECRET, etc.
 
-# Development
+# Start the development server
 npm run dev    # http://localhost:4000
-
-# Production build
-npm run build  # Builds front‑end assets
-npm start     # Runs the server
 ```
 
-The server runs on the port defined by `PORT` (default `3000`).  
+The server listens on the port specified by `PORT` (default `3000`). Once running, the API can be accessed at `http://localhost:${PORT}` and the WebSocket server at `ws://localhost:${PORT}/ws`.
 
 ---
 
-## 📦 Installation & build
-
-### Development
-
-```bash
-npm install
-cp .env.example .env
-# Edit .env
-npm run dev
-```
-
-### Production
-
-```bash
-npm run build   # Bundle front‑end assets
-npm start       # Starts the production server
-```
-
----
-
-## ⚙️ Configuration
+## 🔧 Configuration
 
 Create a `.env` file at the project root. Example:
 
@@ -148,28 +123,28 @@ TWILIO_SID=your_twilio_sid
 TWILIO_AUTH_TOKEN=your_twilio_token
 ```
 
-| Variable        | Default | Description |
-|-----------------|---------|--------------|
-| `PORT`          | 3000    | Server port |
-| `DB_URL`        | –       | Database connection string |
-| `JWT_SECRET`    | –       | Secret key for JWT authentication |
-| `TWILIO_SID`   | –       | Twilio Account SID for SMS notifications |
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `PORT` | 3000 | Server listening port |
+| `DB_URL` | – | Database connection string |
+| `JWT_SECRET` | – | Secret key for JWT authentication |
+| `TWILIO_SID` | – | Twilio Account SID for SMS notifications |
 | `TWILIO_AUTH_TOKEN` | – | Twilio Auth Token |
 
 See `.env.example` for optional settings and defaults.
 
 ---
 
-## 🔧 Available scripts
+## 📦 Scripts
 
-| Script        | Purpose |
-|---------------|---------|
-| `npm run dev` | Hot‑reloading development server |
-| `npm run build` | Builds front‑end assets |
-| `npm start`   | Starts production server |
+| Script | Purpose |
+|--------|---------|
+| `npm run dev` | Starts a hot‑reloading development server |
+| `npm run build` | Bundles front‑end assets for production |
+| `npm start` | Runs the production server |
 | `npm run lint` | Runs ESLint |
 | `npm run format` | Formats code with Prettier |
-| `npm test`    | Runs Jest tests and generates coverage |
+| `npm test` | Runs Jest tests and generates coverage |
 
 ---
 
