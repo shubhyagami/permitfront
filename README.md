@@ -1,7 +1,7 @@
 [K[2m  [2mmodel z-ai/glm-5.3-flash failed, trying next...[0m[0m
 # Permitfront
 
-A lightweight, open-source web application for managing permit-application workflows. Permitfront handles permits end to end, enforces role-based access control, keeps an immutable audit trail, and pushes live updates over WebSockets.
+A lightweight, open-source web application for managing permit-application workflows. Permitfront handles permits end to end: it enforces role-based access control, keeps an immutable audit trail, and pushes live updates over WebSockets.
 
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Node.js CI](https://github.com/shubhyagami/permitfront/actions/workflows/node.js.yml/badge.svg)
@@ -29,7 +29,7 @@ A lightweight, open-source web application for managing permit-application workf
 
 ## Overview
 
-Permitfront covers the full permit lifecycle, from initial submission through to final approval. It is designed for teams that want a small, hackable core rather than a heavyweight platform.
+Permitfront covers the full permit lifecycle, from initial submission through to final approval. It is built for teams that want a small, hackable core rather than a heavyweight platform.
 
 Key characteristics:
 
@@ -155,7 +155,7 @@ See `.env.example` for optional settings and defaults.
 npm test
 ```
 
-Tests are written with Jest. Coverage reports are written to `coverage/`, and the header badge reflects the latest upload to Codecov.
+Tests are written with Jest. Coverage reports are written to `coverage/`, and the badge above reflects the latest upload to Codecov.
 
 ---
 
